@@ -8,34 +8,43 @@ public class App {
         Kasir kasir = new Kasir();
         Koki koki = new Koki();
         Pelayan pelayan = new Pelayan();
-        Satpam satpam = new Satpam();
-
         // memberi value pada objek
 
         // manager
         manager.nama = "Surya";
         manager.id_pegawai = 1;
-        manager.gaji = "7 juta";
+        manager.gaji = 7;
+        manager.tugas = 1;
 
-        // kasir
+        // kasir & satpam
         kasir.nama = "Aldi";
         kasir.id_pegawai = 2;
-        kasir.gaji = "1,7 juta";
+        kasir.gaji = 1.0;
+        // mendeklarasi tugas pegawai
+        kasir.tugas = 2;
+        // program if untuk menentukan gaji bersih
+        if (kasir.tugas == 2) {
+            kasir.gaji_bersih = kasir.gaji + kasir.gaji;
+            kasir.total_gaji = kasir.gaji_bersih - (0.1 * kasir.gaji_bersih);
+        }
 
         // koki
         koki.nama = "Reza";
         koki.id_pegawai = 3;
-        koki.gaji = "2 juta";
+        koki.gaji = 2;
+        kasir.tugas = 1;
 
-        // pelayan
+        // pelayan & kasir
         pelayan.nama = "Dean";
         pelayan.id_pegawai = 4;
-        pelayan.gaji = "1,2 juta";
-
-        // satpam
-        satpam.nama = "Reza";
-        satpam.id_pegawai = 5;
-        satpam.gaji = "1 juta";
+        pelayan.gaji = 1.0;
+        // mendeklarasi tugas pegawai
+        pelayan.tugas = 2;
+        // program if untuk menentukan gaji bersih
+        if (pelayan.tugas == 2) {
+            pelayan.gaji_bersih = pelayan.gaji + pelayan.gaji;
+            pelayan.total_gaji = pelayan.gaji_bersih - (0.1 * pelayan.gaji_bersih);
+        }
 
         // menampilkan pegawai dan tugas
         pegawai.tampil();
@@ -51,8 +60,5 @@ public class App {
 
         pelayan.tampil();
         pelayan.tugas();
-
-        satpam.tampil();
-        satpam.tugas();
     }
 }

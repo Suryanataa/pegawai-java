@@ -4,7 +4,7 @@ public class Koki extends Pegawai {
     public void tampil() {
         System.out.println("Nama: " + nama);
         System.out.println("Id_pegawai: " + id_pegawai);
-        System.out.println("Gaji: " + gaji);
+        System.out.println("Gaji: " + gaji + " Juta");
     }
 
     public void tugas() {
